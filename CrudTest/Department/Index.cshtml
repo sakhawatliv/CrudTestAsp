@@ -1,0 +1,48 @@
+﻿@using System.Data.SqlClient
+@using System.Web.Mvc
+@{
+    Layout = "~/Layout/_Layout.cshtml";
+}
+
+
+<body>
+    <div>
+        <h1>Index</h1>
+        @{
+            string cSring = @"Data Source=DESKTOP-1HKAK02\SQLEXPRESS;Initial Catalog=CrudTest;User Id=sa;Password=mzaman9";
+
+            SqlConnection cnn;
+            cnn = new SqlConnection(cSring);
+            cnn.Open();
+
+            SqlCommand commandRead;
+            SqlDataReader dataReader;
+            string SqlRead = " ";
+            SqlRead = "SELECT * FROM Department";
+            commandRead = new SqlCommand(SqlRead, cnn);
+            dataReader = commandRead.ExecuteReader();
+
+
+            
+        }
+        
+        <table class="table">
+            <tr>
+                <th>Department Name</th>
+                <th>Department Code</th>
+            </tr>
+            @{
+                while (dataReader.Read())
+                {
+            <tr>
+                <td>@dataReader.GetValue(1)</td>
+                <td>@dataReader.GetValue(2)</td>
+            </tr>
+                }
+            }
+        </table>
+        
+        
+    </div>
+</body>
+

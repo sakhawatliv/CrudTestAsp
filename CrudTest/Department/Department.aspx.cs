@@ -47,25 +47,16 @@ namespace CrudTest.Department
             DataTable tbl = new DataTable();
             while (dtaReader.Read())
             {
-                tbl.Columns.Add(dtaReader.GetValue(1).ToString());    
+                //tbl.Columns.Add(dtaReader.GetValue(1).ToString());    
                 //Label1.Text = output + dtaReader.GetValue(1);
             }
 
             //Table1.Load(tbl);
             tbl.Load(dtaReader);
-            
+            Response.Redirect("Index.cshtml");
 
 
-
-
-
-
-
-
-
-
-
-        }
+           }
 
         
     }
