@@ -147,6 +147,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Department\Department.aspx" />
     <Content Include="Department\DepartmentEdit.aspx" />
+    <Content Include="Department\Index2.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -233,6 +234,13 @@
     </Compile>
     <Compile Include="Department\DepartmentEdit.aspx.designer.cs">
       <DependentUpon>DepartmentEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Department\Index2.aspx.cs">
+      <DependentUpon>Index2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Department\Index2.aspx.designer.cs">
+      <DependentUpon>Index2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
