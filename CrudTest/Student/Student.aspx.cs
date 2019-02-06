@@ -15,7 +15,7 @@ namespace CrudTest.Student
             /*Simple Connection Buildup*/
             string connectionString;
             SqlConnection cnn;
-            connectionString = @"Data Source=DESKTOP-1HKAK02\SQLEXPRESS;Initial Catalog=CrudTest;User Id=sa;Password=mzaman9";
+            connectionString = @"Data Source=DESKTOP-1HKAK02\SQLEXPRESS;Initial Catalog=CrudTest;Integrated Security = true";
             cnn = new SqlConnection(connectionString);
             cnn.Open();
             //Response.Write("Connection Made");

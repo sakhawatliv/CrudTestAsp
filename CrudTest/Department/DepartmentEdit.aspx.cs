@@ -10,7 +10,8 @@ namespace CrudTest.Department
 {
     public partial class DepartmentEdit : System.Web.UI.Page
     {
-        string cSring = @"Data Source=DESKTOP-1HKAK02\SQLEXPRESS;Initial Catalog=CrudTest;User Id=sa;Password=mzaman9";
+        //string cSring = @"Data Source=DESKTOP-1HKAK02\SQLEXPRESS;Initial Catalog=CrudTest;User Id=sa;Password=123456";
+        string cSring = @"Data Source=DESKTOP-1HKAK02\SQLEXPRESS;Initial Catalog=CrudTest;Integrated Security = true";
         protected void Page_Load(object sender, EventArgs e)
         {
             SqlConnection cnn;
